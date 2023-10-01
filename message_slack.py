@@ -4,7 +4,8 @@ import requests
 from pendulum import today
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
-client = WebClient(token='xoxb-3904453578167-5974052135938-dVB4smcRxplxRhdNK0zU0ea8')
+
+client = WebClient(token=os.getenv('SLACK_TOKEN'))
 
 def get_sessionize_sessions(url):
     try:
