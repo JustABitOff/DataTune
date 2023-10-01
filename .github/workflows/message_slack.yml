@@ -24,4 +24,4 @@ jobs:
 
       - name: message slack
         run: |
-          python -m message_slack.py
+          python message_slack.py
