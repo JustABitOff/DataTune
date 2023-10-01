@@ -5,7 +5,10 @@ on:
     - cron: '*/5 * * * *'
 # on:
 #   workflow_dispatch:
-    
+
+env:
+  SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+  
 jobs:
   message_slack:
     runs-on: ubuntu-latest
