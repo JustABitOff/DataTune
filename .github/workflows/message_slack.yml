@@ -1,8 +1,10 @@
 name: message slack
 
+# on:
+#   schedule:
+#     - cron: '*/5 * * * *'
 on:
-  schedule:
-    - cron: '*/5 * * * *'
+  workflow_dispatch:
     
 jobs:
   unit_test:
