@@ -26,7 +26,7 @@ def get_sessionize_sessions(url):
 response = get_sessionize_sessions('https://sessionize.com/api/v2/q4frvnyx/view/Sessions')
 number_of_sessions = len(response[0].get('sessions'))
 
-channel_id = "C05L51TPK7T"
+channel_id = "C05UMU23YJX"
 
 try:
     result = client.chat_postMessage(
