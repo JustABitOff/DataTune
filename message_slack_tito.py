@@ -30,9 +30,9 @@ def get_ticket_sales(url):
         return None
     
 
-response = get_ticket_sales('https://api.tito.io/v3/datatuneconf/nashville-2024/tickets')
-registration_counts = Counter(i['release_title'] for i in response['tickets'])
-message = '\n'.join([i + ': ' + str(registration_counts[i]) for i in registration_counts])
+response = get_ticket_sales('https://api.tito.io/v3/datatuneconf/nashville-2024/tickets?page[size]=1000')
+registration_counts = Counter(i['release_title'] for i in response['tickets']).most_common()
+message = '\n'.join([':white_circle: ' + i[0] + ': ' + str(i[1]) for i in registration_counts])
 
 channel_id = "C05L51TPK7T"
 
