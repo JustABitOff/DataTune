@@ -27,4 +27,4 @@ jobs:
 
       - name: message slack
         run: |
-          python message_slack_tito.py
+          python slack/message_slack_tito.py
