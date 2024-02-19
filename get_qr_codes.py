@@ -3,7 +3,7 @@ import requests
 
 from PIL import Image
 
-from api.tito import Tito
+from tito import Tito
 
 
 def _convert_slug_to_qr_code_url(slug: str) -> str:
